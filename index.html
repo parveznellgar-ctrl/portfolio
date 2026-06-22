@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parvez Rangrezz | 3D Portfolio - Creative Digital Specialist</title>
+  <meta name="description" content="Portfolio of Parvez Rangrezz - Video Editor, Graphic Designer, Digital Marketer, and BCA Developer. Discover premium 3D design, web development, and digital marketing.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 3D WebGL Background Canvas -->
+  <canvas id="canvas3d"></canvas>
+
+  <!-- Interactive Custom Cursor Follower -->
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Header & Navigation -->
+  <nav class="navbar">
+    <a href="#" class="nav-logo">
+      <span class="text-gradient">PARVEZ</span>.R
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Works</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-btn" id="menuToggle" aria-label="Toggle Menu">
+      <i data-lucide="menu" size="28"></i>
+    </button>
+  </nav>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#portfolio" class="mobile-link">Works</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section-padding">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge-container" style="margin-bottom: 20px;">
+            <div class="badge"><i data-lucide="sparkles"></i> 2nd Year BCA Student</div>
+            <div class="badge"><i data-lucide="zap"></i> Top Rated Freelancer</div>
+          </div>
+          <h1>Crafting Visuals,<br><span class="text-gradient">Coding Experiences.</span></h1>
+          <p class="hero-subtitle">
+            A results-driven hybrid specialist bridging the gap between high-performance code and stunning creative content. Experienced in Web Development, Video Production, and Digital Marketing.
+          </p>
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn btn-primary glow-hover">Explore Works <i data-lucide="arrow-up-right"></i></a>
+            <a href="#contact" class="btn btn-secondary">Let's Talk <i data-lucide="message-square"></i></a>
+          </div>
+          <div class="badge-container">
+            <div class="badge"><i data-lucide="video"></i> Video Editing</div>
+            <div class="badge"><i data-lucide="palette"></i> Graphic Design</div>
+            <div class="badge"><i data-lucide="globe"></i> SEO & Marketing</div>
+            <div class="badge"><i data-lucide="code-2"></i> Technical Dev</div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="display-box glass-panel glow-hover">
+            <div class="display-box-bg"></div>
+            <div class="display-inner">
+              <div class="display-header">
+                <div class="display-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <i data-lucide="monitor" size="18" style="color: var(--text-muted);"></i>
+              </div>
+              <div class="display-body">
+                <div class="display-pulse">
+                  <i data-lucide="play"></i>
+                </div>
+                <h3>Active Creative</h3>
+                <p>Developing high-retention stories, design layouts, and scalable database schemas.</p>
+              </div>
+              <div class="display-footer">
+                <span>SYSTEM STATUS: STABLE &middot; ONLINE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+      <div class="section-header">
+        <h2>About <span class="text-gradient">Me</span></h2>
+        <p>Combining the analytical mind of a software engineer with the creative soul of a digital creator.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="glass-panel" style="padding: 30px; display: flex; flex-direction: column; align-items: center; text-align: center; border-radius: 32px; gap: 20px;">
+            <div style="width: 140px; height: 140px; border-radius: 50%; background: var(--gradient-cyber); display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);">
+              <i data-lucide="user-round" size="64" style="color: #fff;"></i>
+            </div>
+            <div>
+              <h3>Parvez Rangrezz</h3>
+            </div>
+          </div>
+        </div>
+        <div class="about-card glass-panel">
+          <p class="about-quote">"The best way to predict the future is to design it and code it."</p>
+          <p class="about-p">
+            I am currently in my 2nd Year of Bachelor of Computer Applications (BCA). Beyond standard programming, I've spent years helping international clients scale their reach through premium visual content, high-conversion thumbnails, professional video edits, and search engine optimization.
+          </p>
+          <p class="about-p">
+            Whether building a relational database schema in MySQL or tailoring high-engagement promotional reels, I deliver client-focused assets that meet professional quality standards.
+          </p>
+          <div class="about-metrics">
+            <div class="metric-item">
+              <h4 class="text-gradient">15+</h4>
+              <p>Completed Projects</p>
+            </div>
+            <div class="metric-item">
+              <h4 class="text-gradient">3+</h4>
+              <p>Years Experience</p>
+            </div>
+            <div class="metric-item">
+              <h4 class="text-gradient">100%</h4>
+              <p>On-Time Delivery</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+      <div class="section-header">
+        <h2>Expert <span class="text-gradient">Services</span></h2>
+        <p>Providing high-end solutions across creative storytelling, branding, and application structure.</p>
+      </div>
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card glass-panel glow-hover">
+          <div class="service-icon">
+            <i data-lucide="video"></i>
+          </div>
+          <h3>Video Production</h3>
+          <p>Editing high-retention YouTube content, social reels, ads, and short form loops designed to captivate attention and drive CTA metrics.</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="service-card glass-panel glow-hover">
+          <div class="service-icon">
+            <i data-lucide="palette"></i>
+          </div>
+          <h3>Graphic Design</h3>
+          <p>Crafting high-click-through rate thumbnails, branding assets, posters, web banners, and modern vector layouts.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="service-card glass-panel glow-hover">
+          <div class="service-icon">
+            <i data-lucide="code-2"></i>
+          </div>
+          <h3>Web & DB Development</h3>
+          <p>Coding responsive, clean web interfaces (HTML, CSS, JS) and organizing relational databases (MySQL, Schema Design) for optimal data handling.</p>
+        </div>
+        <!-- Service 4 -->
+        <div class="service-card glass-panel glow-hover">
+          <div class="service-icon">
+            <i data-lucide="bar-chart-3"></i>
+          </div>
+          <h3>SEO & Digital Marketing</h3>
+          <p>Optimizing content meta tags, keyword search indexes, and visual thumbnails to significantly boost organic reach and audience conversion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding">
+      <div class="section-header">
+        <h2>Featured <span class="text-gradient">Works</span></h2>
+        <p>Browse a curated selection of video, design, and software programming tasks.</p>
+      </div>
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="video">Video Editing</button>
+        <button class="filter-btn" data-filter="design">Graphic Design</button>
+        <button class="filter-btn" data-filter="code">Web & Technical</button>
+      </div>
+      
+      <div class="portfolio-grid">
+        <!-- Project 1 (Video) -->
+        <div class="portfolio-item glass-panel" data-category="video">
+          <div class="portfolio-img">
+            <div class="art-placeholder" style="background: linear-gradient(135deg, #1b0b30, #050510);">
+              <div class="art-icon"><i data-lucide="play-circle"></i></div>
+              <h4>Commercial Campaign Edit</h4>
+              <p>Promotional Marketing Video</p>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <span class="portfolio-category">Video Production</span>
+            <h3>Dynamic Marketing Reel</h3>
+            <p>High-tempo, motion-heavy promotional video created for a digital product campaign. Leveraged pacing and visual effects to drive click-throughs.</p>
+            <a href="#" class="portfolio-link">View Media <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 2 (Design) -->
+        <div class="portfolio-item glass-panel" data-category="design">
+          <div class="portfolio-img">
+            <div class="art-placeholder" style="background: linear-gradient(135deg, #09203f, #537895);">
+              <div class="art-icon"><i data-lucide="image"></i></div>
+              <h4>Branding & Graphic Package</h4>
+              <p>Banner, Post, Logo Assets</p>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <span class="portfolio-category">Graphic Design</span>
+            <h3>High-CTR Thumbnails</h3>
+            <p>A package of visually striking thumbnails designed for high-profile YouTube channels, using harmonized color contrasting and bold typography.</p>
+            <a href="#" class="portfolio-link">View Case Study <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 3 (Code) -->
+        <div class="portfolio-item glass-panel" data-category="code">
+          <div class="portfolio-img">
+            <div class="art-placeholder" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">
+              <div class="art-icon"><i data-lucide="terminal"></i></div>
+              <h4>BCA University Database</h4>
+              <p>MySQL + Java Project Backend</p>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <span class="portfolio-category">Web & Databases</span>
+            <h3>College Relational Database</h3>
+            <p>A custom student course enrollment schema designed with MySQL, implementing normalizations (1NF-3NF) and optimized indexes for fast querying.</p>
+            <a href="#" class="portfolio-link">Explore Code <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 4 (Video) -->
+        <div class="portfolio-item glass-panel" data-category="video">
+          <div class="portfolio-img">
+            <div class="art-placeholder" style="background: linear-gradient(135deg, #200122, #6f0000);">
+              <div class="art-icon"><i data-lucide="clapperboard"></i></div>
+              <h4>Social Ads & Reels Edit</h4>
+              <p>Short-form vertical video campaign</p>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <span class="portfolio-category">Video Production</span>
+            <h3>Instagram Promo Video</h3>
+            <p>High-retention vertical marketing clip optimized for mobile devices, combining visual sound effects and engaging caption overlays.</p>
+            <a href="#" class="portfolio-link">View Media <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 5 (Design) -->
+        <div class="portfolio-item glass-panel" data-category="design">
+          <div class="portfolio-img">
+            <div class="art-placeholder" style="background: linear-gradient(135deg, #1d4ed8, #a855f7, #ec4899);">
+              <div class="art-icon"><i data-lucide="sparkles"></i></div>
+              <h4>AI-Assisted Ad Creatives</h4>
+              <p>AI generation + Photoshop compositing</p>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <span class="portfolio-category">Graphic Design</span>
+            <h3>Cyberpunk Promo Banners</h3>
+            <p>Digital marketing banners created by combining advanced AI generation prompts with manual Photoshop adjustments for typography and detailing.</p>
+            <a href="#" class="portfolio-link">View Gallery <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 6 (Code) -->
+        <div class="portfolio-item glass-panel" data-category="code">
+          <div class="portfolio-img">
+            <div class="art-placeholder" style="background: linear-gradient(135deg, #111827, #1f2937);">
+              <div class="art-icon"><i data-lucide="layout"></i></div>
+              <h4>Interactive Portfolio Landing</h4>
+              <p>HTML5, Vanilla CSS, WebGL, GSAP</p>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <span class="portfolio-category">Web Development</span>
+            <h3>Ultra-Premium Portfolio</h3>
+            <p>This exact website! A custom responsive page using Three.js for interactive particles and GSAP ScrollTrigger for hardware-accelerated animations.</p>
+            <a href="#" class="portfolio-link">Inspect Code <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+      <div class="section-header">
+        <h2>Expert <span class="text-gradient">Skills</span></h2>
+        <p>A breakdown of my professional, creative, and technical capabilities.</p>
+      </div>
+      <div class="skills-grid">
+        <!-- Creative Skills -->
+        <div class="skills-column glass-panel" style="padding: 40px;">
+          <h3><i data-lucide="palette"></i> Creative & Marketing</h3>
+          <div class="skills-list">
+            <!-- Skill 1 -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Video Editing (Premiere, CapCut)</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percent="90%"></div>
+              </div>
+            </div>
+            <!-- Skill 2 -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Graphic Design (Photoshop, Canva, Figma)</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percent="85%"></div>
+              </div>
+            </div>
+            <!-- Skill 3 -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>SEO & Content Optimization</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percent="80%"></div>
+              </div>
+            </div>
+            <!-- Skill 4 -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Social Media & Audience Engagement</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percent="85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="skills-column glass-panel" style="padding: 40px;">
+          <h3><i data-lucide="code-2"></i> Tech & Programming</h3>
+          <div class="skills-list">
+            <!-- Skill 1 -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Web Development (HTML5, CSS3, JS)</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percent="85%"></div>
+              </div>
+            </div>
+            <!-- Skill 2 -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Relational Databases (MySQL, SQL query optimization)</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percent="75%"></div>
+              </div>
+            </div>
+            <!-- Skill 3 -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Programming Foundations (C, Java)</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percent="70%"></div>
+              </div>
+            </div>
+            <!-- Skill 4 -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Professional Client Management & Remote Collab</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percent="90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+      <div class="section-header">
+        <h2>Get in <span class="text-gradient">Touch</span></h2>
+        <p>Let's collaborate on your next digital marketing, video, or software web project.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <!-- Card 1 -->
+          <div class="contact-card glass-panel glow-hover">
+            <div class="contact-card-icon"><i data-lucide="mail"></i></div>
+            <div class="contact-card-details">
+              <h4>Email Me</h4>
+              <a href="mailto:parveznellgar@gmail.com">parveznellgar@gmail.com</a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="contact-card glass-panel glow-hover">
+            <div class="contact-card-icon"><i data-lucide="phone"></i></div>
+            <div class="contact-card-details">
+              <h4>Call Me</h4>
+              <a href="tel:+916376352309">+91 6376352309</a>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="contact-card glass-panel glow-hover">
+            <div class="contact-card-icon"><i data-lucide="map-pin"></i></div>
+            <div class="contact-card-details">
+              <h4>Location</h4>
+              <p>Hamirgarh, Rajasthan, India</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-panel glass-panel">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Describe your project requirements" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary glow-hover" style="width: 100%; justify-content: center;">
+              Send Message <i data-lucide="send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-text">
+      &copy; 2026 Parvez Rangrezz. All Rights Reserved. Crafted with WebGL & GSAP.
+    </div>
+    <div class="footer-socials">
+      <a href="https://github.com/parveznellgar" target="_blank" class="social-icon" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+      </a>
+      <a href="mailto:parveznellgar@gmail.com" class="social-icon" aria-label="Email"><i data-lucide="mail"></i></a>
+      <a href="tel:+916376352309" class="social-icon" aria-label="Phone"><i data-lucide="phone"></i></a>
+    </div>
+  </footer>
+
+  <!-- Include Scripts -->
+  <!-- Three.js (WebGL Engine) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Application Logic -->
+  <script src="three-bg.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
