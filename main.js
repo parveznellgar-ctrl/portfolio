@@ -67,52 +67,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
 
+  // Ensure all items start visible
+  portfolioItems.forEach(item => {
+    item.style.opacity = '1';
+    item.style.display = 'flex';
+  });
+
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Toggle active class on buttons
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
       const filterValue = btn.getAttribute('data-filter');
 
-      // Animate portfolio cards transition
-      gsap.to('.portfolio-item', {
-        opacity: 0,
-        scale: 0.9,
-        y: 20,
-        duration: 0.3,
-        stagger: 0.05,
+      // Fade out all items first
+      gsap.to(Array.from(portfolioItems), {
+        opacity: 0, y: 20, scale: 0.95, duration: 0.25, stagger: 0.03,
         onComplete: () => {
+          const toShow = [];
           portfolioItems.forEach(item => {
-            const itemCat = item.getAttribute('data-category');
-            if (filterValue === 'all' || itemCat === filterValue) {
+            const cat = item.getAttribute('data-category');
+            if (filterValue === 'all' || cat === filterValue) {
               item.style.display = 'flex';
+              toShow.push(item);
             } else {
               item.style.display = 'none';
             }
           });
-
-          // Animate back in
-          gsap.to('.portfolio-item:visible', {
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            duration: 0.5,
-            stagger: 0.05,
-            ease: 'power3.out'
-          });
-          
-          // Fallback selection for query selectors (handles direct display elements)
-          const visibleItems = Array.from(portfolioItems).filter(item => item.style.display !== 'none');
-          if (visibleItems.length > 0) {
-            gsap.to(visibleItems, {
-              opacity: 1,
-              scale: 1,
-              y: 0,
-              duration: 0.5,
-              stagger: 0.05,
-              ease: 'power3.out'
-            });
+          // Animate matching items back in
+          if (toShow.length > 0) {
+            gsap.fromTo(toShow,
+              { opacity: 0, y: 30, scale: 0.95 },
+              { opacity: 1, y: 0, scale: 1, duration: 0.5, stagger: 0.08, ease: 'power3.out' }
+            );
           }
         }
       });
@@ -357,3 +343,4 @@ document.addEventListener('DOMContentLoaded', () => {
 function jQueryFallbackFix() {
   // Enables a custom pseudoselector :visible via vanilla array logic if needed
 }
+
