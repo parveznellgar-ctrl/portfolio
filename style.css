@@ -461,24 +461,53 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; width: 80px; 
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .skills-grid { grid-template-columns: 1fr; gap: 40px; }
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
   .navbar { padding: 15px 5%; }
   .nav-links { display: none; }
   .menu-btn { display: block; }
-  .section-padding { padding: 80px 5% 60px 5%; }
-  .hero-content h1 { font-size: 3.2rem; }
-  .section-header h2 { font-size: 2.4rem; }
+  .section-padding { padding: 70px 4% 50px 4%; }
+  .hero-content h1 { font-size: 3rem; }
+  .section-header h2 { font-size: 2.2rem; }
   .hero-profile-ring { width: 240px; height: 240px; }
   .portfolio-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
   .about-metrics { grid-template-columns: 1fr; gap: 15px; }
   footer { flex-direction: column; text-align: center; }
   .contact-form-panel { padding: 24px; }
+  /* Video fix on mobile */
+  .video-section-inner { padding: 0 12px; gap: 20px; }
+  .video-label h2 { font-size: 1.5rem; }
+  .showcase-video { border-radius: 8px; }
+  /* Badge fix */
+  .badge { font-size: 0.72rem; padding: 5px 10px; }
+  .hero-cta { flex-direction: column; align-items: center; gap: 14px; }
+  /* Skills fix */
+  .skills-column { padding: 24px !important; }
+  /* Service card */
+  .service-card { padding: 28px 22px; }
+  /* About fix */
+  .about-card { padding: 24px; }
+  .contact-info { gap: 16px; }
+  .contact-card { padding: 18px 20px; }
 }
 @media (max-width: 480px) {
-  .hero-content h1 { font-size: 2.5rem; }
-  .btn { padding: 12px 22px; font-size: 0.88rem; }
-  .hero-profile-ring { width: 200px; height: 200px; }
+  .hero-content h1 { font-size: 2.2rem; }
+  .btn { padding: 12px 20px; font-size: 0.85rem; width: 100%; justify-content: center; }
+  .hero-cta { width: 100%; }
+  .hero-profile-ring { width: 190px; height: 190px; }
+  .section-header h2 { font-size: 1.9rem; }
+  .section-padding { padding: 60px 4% 40px 4%; }
+  .filter-btn { font-size: 0.78rem; padding: 7px 14px; }
+  .portfolio-filters { gap: 8px; }
+  /* Navbar logo size */
+  .nav-logo { font-size: 1.3rem; }
+  /* Form inputs bigger tap targets */
+  .form-control { padding: 14px 14px; font-size: 1rem; }
+  textarea.form-control { min-height: 110px; }
+  footer { padding: 30px 5%; }
+  .footer-text { font-size: 0.78rem; text-align: center; }
 }
 
 @keyframes rotate {

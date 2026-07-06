@@ -112,6 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
+    // Refresh ScrollTrigger after all assets (video, images, Three.js) load
+    window.addEventListener('load', () => {
+      ScrollTrigger.refresh();
+    });
+
     // -- HERO SECTION ANIMATIONS --
     const heroTl = gsap.timeline();
     heroTl.from('.hero-content h1', {
@@ -120,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: 1,
       ease: 'power4.out'
     })
-    .from('.hero-subtitle', {
+    .from('.hero-role-title', {
       y: 30,
       opacity: 0,
       duration: 0.8,
@@ -186,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from('.service-card', {
       scrollTrigger: {
         trigger: '#services',
-        start: 'top 80%',
+        start: 'top 85%',
       },
       y: 40,
       opacity: 0,
@@ -199,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from('.portfolio-item', {
       scrollTrigger: {
         trigger: '#portfolio',
-        start: 'top 75%',
+        start: 'top 80%',
       },
       y: 50,
       opacity: 0,
